@@ -11,10 +11,12 @@ pipeline {
 			parameters {
 				string(name: 'NAME', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
 				string(name: 'AGE', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+			}
         	steps {
 	    	
 			sh 'echo "$NAME"'
 			sh 'echo "$AGE"'
+		}
             }
         }
     }
