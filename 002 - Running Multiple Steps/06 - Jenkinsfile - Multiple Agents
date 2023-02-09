@@ -16,6 +16,7 @@ pipeline {
 		docker {
 			image 'node:latest'
 		}
+	}
 	steps{
 		sh 'npm --version'
 	}
