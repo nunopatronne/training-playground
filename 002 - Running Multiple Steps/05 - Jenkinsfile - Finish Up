@@ -18,5 +18,8 @@ pipeline {
 	unsuccessful {
 		echo 'Fail'
 	}
+	always {
+		echo 'always'
+	}
     }
 }
