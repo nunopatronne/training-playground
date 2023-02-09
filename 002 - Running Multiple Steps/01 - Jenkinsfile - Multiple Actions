@@ -3,7 +3,18 @@ pipeline {
 		docker { 
 			image 'alpine:latest' 
 		}
+		
 	}
     stages {
+    	stage("data")(
+		steps{
+			scripts{
+				sh 'date > dicheiro.txt'
+				for(int i = 0;i<2;i++){
+					sh 'cat ficheiro.txt'
+					sh 'sleep 10'
+					}
+				}
+			}
     }
 }
