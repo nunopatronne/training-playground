@@ -5,5 +5,13 @@ pipeline {
 		}
 	}
     stages {
+    	stage('build'){
+		stops{
+			sh 'date > currDate.txt'
+		}
+	}
+	stage('test'){
+		sh 'grep "2019" currDate.txt
+	}
     }
 }
